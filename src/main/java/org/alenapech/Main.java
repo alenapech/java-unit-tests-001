@@ -20,18 +20,4 @@ public class Main {
         assertThatThrownBy(() -> Calculator.calculatingDiscount(100, -1)).isInstanceOf(DiscountAmountException.class);
         assertThatThrownBy(() -> Calculator.calculatingDiscount(100, 101)).isInstanceOf(DiscountAmountException.class);
     }
-
-
-    // 1.7
-    public static void testingJavaCollectionsAssertJ(String[] colors) {
-        assertThat(colors)
-                .isNotEmpty()             // Массив не должен быть пустым
-                .hasSize(7)      // Размер массива должен быть равен 7
-                .doesNotHaveDuplicates() // Массив не должен содержать повторяющихся элементов
-                .contains("orange", "green", "violet") // Массив должен содержать цвета: "orange", "green", "violet"
-                .endsWith("gold")   //  Последним цветом в массиве должен быть "gold"
-                .startsWith("aqua")     // Первым цветом в массиве должен быть "aqua"
-                .containsSequence("yellow", "blue")      // В массиве должна быть последовательность цветов "yellow", "blue"
-                .doesNotContain("red", "black"); //Массив не должен содержать цвета: "red", "black"
-    }
 }
